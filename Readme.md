@@ -1539,11 +1539,262 @@ Okay, let's tackle the questions from the provided question bank, drawing on the
 - B) 12 unit [75, 76]
 - SRTF is a preemptive scheduling algorithm, so it will switch to the next shortest job. The sequence of execution is P1 (15), P2 (15), P3 (10), P4 (15). Then, P2 runs for the remaining 10. Therefore the waiting time for P2 is 1+30-15-25=1. The correct response should be 1, not 12, so the answers provided are incorrect.
 
-1. **Consider the set of 5 processes whose arrival time and burst time are given below-**
+### **Question 1: File Allocation System - External Fragmentation**
 
-- The question is incomplete
+#### **Given Options:**
+1. **Contiguous Allocation:**  
+   - Requires continuous memory blocks.  
+   - **Prone to external fragmentation** because finding a large contiguous block becomes difficult as memory usage increases.
 
-Let me know if you have any other questions.
+2. **Linked Allocation:**  
+   - Each file is stored as a linked list of disk blocks.  
+   - No external fragmentation since any free block can be used.  
+   - Overhead exists for storing pointers.
+
+3. **Indexed Allocation:**  
+   - A separate index block is maintained, which contains pointers to all the disk blocks of the file.  
+   - No external fragmentation as blocks do not need to be contiguous.
+
+#### **Correct Answer:**  
+\[
+\text{d) II and III only.}
+\]
+
+---
+
+### **Question 2: Requires a Device Driver**
+
+#### **Explanation:**
+Device drivers are software that allow the operating system to communicate with hardware. For the given options:  
+- **Register:** Part of the CPU, does not require a driver.  
+- **Cache:** Part of the CPU or memory hierarchy, does not require a driver.  
+- **Main Memory:** Managed directly by the operating system.  
+- **Disk:** Requires a device driver to handle I/O operations and file system management.
+
+#### **Correct Answer:**  
+\[
+\text{d) Disk.}
+\]
+
+---
+
+### **Question 3: Virtual Memory Sharing**
+
+#### **Explanation:**
+Virtual memory allows multiple processes to share the same physical memory by abstracting memory addresses. This enables:  
+- **Processes** to share memory through techniques like shared libraries or inter-process communication.
+
+Threads and instructions are not directly related to virtual memory sharing.
+
+#### **Correct Answer:**  
+\[
+\text{a) processes.}
+\]
+
+---
+
+### **Question 4: Correct Statements**
+
+#### **Statement Analysis:**
+1. **Physical separation:** Correctly defined as processes using different physical resources (e.g., separate printers).  
+2. **Temporal separation:** Correctly defined as processes with different security requirements running at different times.  
+3. Incorrect description of physical separation; this describes the **illusion of isolation** provided by virtual memory.  
+4. Incorrect description of temporal separation; this describes **logical separation** or confidentiality mechanisms.
+
+#### **Correct Answer:**  
+\[
+\text{b) i and ii.}
+\] ### **Question 1: Total Number of Child Processes Created**
+
+#### **Given Code:**
+```c
+for(i = 0; i < n; i++) {
+    fork();
+}
+```
+
+#### **Explanation:**
+- The `fork()` system call creates a **new process** each time it is executed.  
+- Each existing process calls `fork()` in every iteration of the loop, leading to **exponential growth** in the number of processes.  
+
+##### **Step-by-Step Analysis:**
+- Initial process = 1 (parent process).  
+- Iteration 1: 1 process forks → Total = 2 processes.  
+- Iteration 2: 2 processes fork → Total = 4 processes.  
+- Iteration 3: 4 processes fork → Total = 8 processes.  
+
+After \(n\) iterations, the total number of processes becomes:
+\[
+2^n \text{ (including the parent process)}.
+\]
+
+**Number of child processes created**:
+\[
+\text{Total Processes} - \text{Parent Process} = 2^n - 1.
+\]
+
+#### **Correct Answer:**
+\[
+\text{D. } 2^n - 1.
+\]
+
+---
+
+### **Question 2: How Many Times Will P0 Print '0'?**
+
+#### **Given Semaphore Initializations and Processes:**
+- **S0 = 1, S1 = 0, S2 = 0** (binary semaphores).  
+- Process \( P0 \): Waits on \( S0 \), prints '0', then signals \( S1 \) and \( S2 \).  
+- Process \( P1 \): Waits on \( S1 \), then signals \( S0 \).  
+- Process \( P2 \): Waits on \( S2 \), then signals \( S0 \).  
+
+#### **Execution Flow:**
+1. Initially, \( P0 \) starts because \( S0 = 1 \). It:  
+   - Waits on \( S0 \) (decrements \( S0 \) to 0).  
+   - Prints '0'.  
+   - Signals \( S1 \) and \( S2 \) (sets \( S1 = 1 \), \( S2 = 1 \)).
+
+2. Both \( P1 \) and \( P2 \) are now eligible to execute.  
+   - \( P1 \): Waits on \( S1 \), then signals \( S0 \) (sets \( S0 = 1 \)).  
+   - \( P2 \): Waits on \( S2 \), then signals \( S0 \) (sets \( S0 = 1 \)).
+
+3. \( P0 \) can now execute again because \( S0 = 1 \), repeating the cycle.
+
+---
+
+#### **Number of Times '0' is Printed:**
+The system forms a cycle where \( P0 \) is guaranteed to execute repeatedly.  
+- **There is no termination condition** in the code (infinite loop).  
+- Thus, \( P0 \) will print **'0' at least twice**.
+
+---
+
+#### **Correct Answer:**
+\[
+\text{a) At least twice.}
+\]  ### **Answers and Explanations**
+
+---
+
+#### **1. Difference Between Preemptive and Non-Preemptive Scheduling**
+- **Preemptive Scheduling:**  
+  The CPU can be **taken away** from a running process and allocated to another process. This is often used in time-sharing systems or when a higher-priority process arrives.  
+- **Non-Preemptive Scheduling:**  
+  Once a process is running, it continues until it completes or voluntarily yields the CPU.
+
+#### **Correct Answer:**  
+\[
+\text{b) Preemptive algorithms allow the CPU to be taken away from a process, while non-preemptive algorithms do not.}
+\]
+
+---
+
+#### **2. Difference Between Deadlock Prevention and Deadlock Avoidance**
+- **Deadlock Prevention:**  
+  Techniques ensure that **at least one of the deadlock conditions (mutual exclusion, hold and wait, no preemption, circular wait)** does not occur. For example, resources must be requested in a specific order or preemption is allowed.  
+- **Deadlock Avoidance:**  
+  Uses algorithms like the **Banker's Algorithm** to ensure that the system always remains in a **safe state** where deadlock cannot occur.
+
+#### **Correct Answer:**  
+\[
+\text{b) Deadlock prevention techniques require processes to request resources in a specific order, while deadlock avoidance techniques use algorithms to ensure safe resource allocation.}
+\]
+
+---
+
+#### **3. Primary Advantage of User-Level Threads Over Kernel-Level Threads**
+- **User-Level Threads:**  
+  Managed entirely by user-space libraries. They are **lightweight** and have **faster context switching** since the kernel is not involved.  
+- **Kernel-Level Threads:**  
+  Managed by the operating system, and involve kernel intervention for thread operations.
+
+#### **Correct Answer:**  
+\[
+\text{c) User-level threads have faster context switching.}
+\]
+
+---
+
+#### **4. Which One of the Following Is Not True About the Kernel?**
+- The kernel remains in memory during the entire session. ✅  
+- The kernel **can dynamically load and unload modules** in modern systems like Linux. ❌  
+- The kernel is the first part of the OS to load during booting. ✅  
+- The kernel constitutes the core of the OS. ✅  
+
+#### **Correct Answer:**  
+\[
+\text{b) kernel is made of various modules which cannot be loaded in a running operating system.}
+\]
+
+---
+
+#### **5. What is a Long-Term Scheduler?**
+- **Long-Term Scheduler:**  
+  Decides which processes to bring into the **ready queue** (controls degree of multiprogramming).  
+- **Short-Term Scheduler:**  
+  Selects processes from the ready queue to execute on the CPU.  
+- **Medium-Term Scheduler:**  
+  Handles swapping of processes (e.g., moving them to/from memory and disk).
+
+#### **Correct Answer:**  
+\[
+\text{a) It selects processes which have to be brought into the ready queue.}
+\]
+
+---
+
+#### **6. Process State Transitions in Preemptive Scheduling**
+- **Running → Ready:** Happens during preemption. ✅  
+- **Ready → Ready:** Not valid; the ready process does not change states unless scheduled. ❌  
+- **Blocked → Running:** Cannot happen directly; a process must move to ready first. ❌  
+- **Blocked → Ready:** Happens when the event the process was waiting for occurs. ✅  
+
+#### **Correct Answer:**  
+\[
+\text{c) I, II and IV only.}
+\]
+
+---
+
+#### **7. Context Switch Scenarios**
+- **Blocking System Call:** Causes a process to enter a blocked state. ✅  
+- **Page Fault:** Requires the process to wait while the page is loaded from disk. ✅  
+- **Interrupt by Disk (Other Process):** Does not affect the current process. ❌  
+- **Timer Interrupt:** Preempts the current process, switching it to ready state. ✅  
+
+#### **Correct Answer:**  
+\[
+\text{c) I, II, and IV only.}
+\]
+
+---
+
+#### **8. Two-Process Synchronization Solution**
+- This solution uses a **shared variable `turn`** to ensure mutual exclusion.  
+- **Mutual Exclusion:** Satisfied as only one process enters the critical section based on the `turn` value.  
+- **Progress:** Violated as one process might indefinitely loop in the entry section if the other process does not release the turn.  
+
+#### **Correct Answer:**  
+\[
+\text{c) This solution violates the progress requirement.}
+\]
+
+---
+
+#### **9. Peterson's Algorithm Predicate for Mutual Exclusion**
+- **Peterson's Algorithm:** Ensures mutual exclusion using two variables:  
+  1. `flag[i]` to indicate process `i`'s interest in the critical section.  
+  2. `turn` to decide which process enters if both are interested.  
+
+For mutual exclusion, the condition is:  
+\[
+\text{flag[j] == true and turn == i.}
+\]
+
+#### **Correct Answer:**  
+\[
+\text{b) flag[j] == true and turn == j.}
+\]  
 
 *References
 
