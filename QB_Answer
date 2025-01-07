@@ -1,0 +1,395 @@
+Okay, let's tackle the questions from the provided question bank, drawing on the information from the sources. I'll provide the answers and cite the sources where the information is found.
+
+Question Bank Answers
+
+What is an operating system?
+d) all of the mentioned [1]
+An operating system is a collection of programs that manages hardware resources [1]. It acts as a system service provider to the application programs and also as an interface between the hardware and application programs [1].
+In operating system, each process has its own __________
+d) all of the mentioned [1]
+Each process has its own address space and global variables, open files, and pending alarms, signals and signal handlers [1].
+The number of processes completed per unit time is known as __________
+b) Throughput [2, 3]
+Throughput is a measure of how many processes are completed in a given time [2, 3].
+To access the services of the operating system, the interface is provided by the ___________
+b) System calls [2, 3]
+System calls provide an interface for applications to access OS services [2, 3].
+When a process is in a “Blocked” state waiting for some I/O service. When the service is completed, it goes to the __________
+d) Ready state [2, 3]
+After an I/O service is complete, a blocked process moves to the ready state [2, 3].
+The interval from the time of submission of a process to the time of completion is termed as ____________
+b) turnaround time [4, 5]
+Turnaround time is the total time from submission to completion of a process [4, 5].
+In priority scheduling algorithm ____________
+a) CPU is allocated to the process with highest priority [4, 5]
+Priority scheduling assigns the CPU to the highest priority process [4, 5].
+A binary semaphore is a semaphore with integer values ____________
+a) 1 [4-7]
+A binary semaphore has integer values of 0 or 1 [4-7].
+Consider the following statements with respect to user-level threads and kernel-supported threads
+b) (ii) and (iii) only [8, 9]
+For user-level threads, a system call can block the entire process. Kernel-supported threads can be scheduled independently [8, 9].
+What is the formula to find disk access time?
+a) Disk Access time=Seek time +Rotational latency +transfer time [8, 9]
+Disk access time is the sum of seek time, rotational latency, and transfer time [8, 9].
+Process synchronization can be done on __________
+c) both hardware and software level [10, 11]
+Process synchronization can be implemented using both hardware and software mechanisms [10, 11].
+Consider the following set of processes, the length of the CPU burst time given in milliseconds. Assuming the above process being scheduled with the SJF scheduling algorithm. The waiting time for process P1 is
+b) The waiting time for process P1 is 0ms [10, 12]
+With SJF, P4 (3ms) runs first, then P1(6ms), then P3(7ms) and then P2(8ms), so P1's waiting time is 0ms [10, 12].
+To avoid deadlock ____________
+a) there must be a fixed number of resources to allocate [12, 13]
+Deadlock avoidance can be done by ensuring a fixed number of resources [12, 13]. The banker's algorithm is one such method [14, 15].
+If the wait for graph contains a cycle ____________
+b) then a deadlock exists [12, 13]
+A cycle in the wait-for graph indicates a deadlock [12, 13, 16].
+The sequence <P1, P3, P4, P2, P0> leads the system to ____________
+b) a safe state [17-19]
+The provided sequence of process completion fulfills the safety criteria, putting the system in a safe state [17-19].
+Logical memory is broken into blocks of the same size called _________
+b) pages [20, 21]
+Logical memory is divided into pages [20, 21].
+The __________ is used as an index into the page table.
+b) page number [20, 21]
+The page number is used as an index to locate the corresponding frame number in the page table [20, 21].
+A page fault -
+d) occurs when a program accesses a page not currently in memory [20-22]
+A page fault occurs when the requested page is not in main memory [20-22].
+For 3 page frames, the following is the reference string: 7 0 1 2 0 3 0 4 2 3 0 3 2 1 2 0 1 7 0 1 How many page faults does the LRU page replacement algorithm produce?
+a) 10 [23, 24]
+Using LRU, the page faults are: 7, 0, 1, 2, 3, 4, 0, 3, 1, 7. So, there are 10 page faults [23, 24].
+Suppose a disk has 201 cylinders, numbered from 0 to 200. At some time, the disk arm is at cylinder 100, and there is a queue of disk access requests for cylinders 30, 85, 90, 100, 105, 110, 135 and 145. If Shortest-Seek Time First (SSTF) is being used for scheduling the disk access, the request for cylinder 90 is serviced after servicing ____________ number of requests.
+a) 2 [25, 26]
+The SSTF sequence would be: 100, 100, 105, 110, 85, 90, 135, 145, 30. The request for cylinder 90 is serviced after 2 requests [25, 26].
+Which of the following disk scheduling strategies is likely to give the best throughput?
+d) Elevator algorithm [27, 28]
+The elevator algorithm, which includes SCAN and C-SCAN, provides better throughput by servicing requests in a continuous sweep across the disk [27, 28].
+Why is one time password safe?
+c) It is different for every access [27, 28]
+A one-time password is safe because it is different for every access [27, 28].
+What is used to protect network from outside internet access?
+c) Firewall to separate trusted and untrusted network [27, 28]
+A firewall protects a network from external access by separating trusted and untrusted networks [27, 28].
+Which one of the following error will be handle by the operating system?
+d) all of the mentioned [29, 30]
+Operating systems handle errors such as power failure, lack of paper in the printer, and connection failure in the network [29, 30].
+In which language UNIX is written?
+d) C [29, 30]
+UNIX is primarily written in the C language [29, 30].
+Which part of the UNIX operating system interacts with the hardware?
+a) Kernel [29, 30]
+The kernel interacts directly with the hardware [29, 30].
+What is a superuser?
+c) administrator [29, 30]
+A superuser is also known as the administrator, and has special rights [29, 30].
+Which character is known as a root directory?
+d) / [31, 32]
+The forward slash (/) represents the root directory [31, 32].
+A process can be terminated due to __________
+d) all of the mentioned [31, 32]
+A process can terminate because of normal exit, fatal error, or being killed by another process [31, 32].
+The number of processes completed per unit time is known as __________
+b) Throughput [31, 32]
+Throughput is the number of processes completed per unit time [31, 32].
+A semaphore is a shared integer variable __________
+a) that can not drop below zero [31, 32]
+A semaphore is a shared integer that can't drop below zero [31-33]. If a semaphore's value is negative, the magnitude is the number of processes waiting on it [34].
+The child process completes execution, but the parent keeps executing, then the child process is known as __________
+b) Zombie [35, 36]
+A child process that has completed execution but whose parent hasn't acknowledged its termination is known as a zombie process [35, 36].
+DMA is used for __________
+a) High speed devices(disks and communications network) [35, 36]
+DMA is used for high-speed devices such as disks and communication networks [35, 36].
+Consider the following set of processes, the length of the CPU burst time given in milliseconds. Assuming the above process being scheduled with the SJF scheduling algorithm. The waiting time for process P1 is
+b) The waiting time for process P1 is 0ms [35, 36]
+In SJF, the shortest job P4 executes first (3ms), followed by P1 (6ms), then P3 (7ms), and then P2 (8ms). So the waiting time for P1 is 0 ms [35, 36].
+What is the sequence in which the processes are completed? Assume round robin scheduling with a time quantum of 2 milliseconds?
+D) P2, P3, P1 [37, 38]
+Given the lack of arrival time in the question the assumption is that all arrive at time zero. With a quantum of 2, the sequence would be P1 (2ms), P2(2ms), P3(2ms), P1(2ms), P2(2ms), P3(1ms), P2(2ms), P2(1ms). Therefore the order of process completion is P3, P2, P1 [37, 38]
+For the processes listed in the following table, which of the following scheduling schemes will give the lowest average turnaround time?
+C Shortest Remaining Time [39, 40]
+Shortest Remaining Time First (SRTF) is a preemptive algorithm that provides the lowest average turnaround time [39, 40].
+Which of the following statements are true?
+d) i, ii and iii [39, 40]
+Shortest remaining time first scheduling may cause starvation. Preemptive scheduling may cause starvation. Round robin is better than FCFS in terms of response time [39, 40].
+Each process Pi, i = 0,1,2,3,……,9 is coded as follows. The code for P10 is identical except that it uses V(mutex) instead of P(mutex). What is the largest number of processes that can be inside the critical section at any moment (the mutex being initialized to 1)?
+a) 1 [6, 7]
+Only one process can be in the critical section at a time when using a mutex initialized to 1 [6, 7].
+A binary semaphore is a semaphore with integer values ____________
+a) 1 [6, 7]
+A binary semaphore has integer values of 0 or 1 [6, 7].
+The program follows to use a shared binary semaphore T. T is set to 0 before either process begins execution and, as before, X is set to 5. Now, how many different values of X are possible after both processes finish executing?
+b) two [41, 42]
+There are two possible values of X. If process A runs first, X will be 10 after A2, and process B sets it to 11. If process B runs first, it waits, then process A runs resulting in X being 10 after A2. Then when process B executes X will be 11 [41, 42].
+A system is in the safe state if ____________
+c) all of the mentioned [41, 42]
+A system is in a safe state if it can allocate resources to each process in some order and still avoid a deadlock, and if there exists a safe sequence [41-43].
+Which one of the following is the deadlock avoidance algorithm?
+a) banker’s algorithm [14, 15]
+The banker's algorithm is used for deadlock avoidance [14, 15, 44].
+The wait-for graph is a deadlock detection algorithm that is applicable when ____________
+a) all resources have a single instance [14, 15]
+The wait-for graph is used for deadlock detection when each resource has a single instance [14-16].
+A system has 3 processes sharing 4 resources. If each process needs a maximum of 2 units then, deadlock ____________
+a) can never occur [23, 24]
+If 3 processes need a maximum of 2 resources each, and there are a total of 4 resources, a deadlock cannot occur because all processes would get 1 resource and a 4th resource would be available [23, 24].
+What is Address Binding?
+d) a mapping from one address space to another [23, 24]
+Address binding is the mapping of a program's address space to physical memory addresses [23, 24].
+With paging there is no ________ fragmentation.
+b) external [23, 24]
+Paging eliminates external fragmentation [23, 24].
+For 3 page frames, the following is the reference string: 7 0 1 2 0 3 0 4 2 3 0 3 2 1 2 0 1 7 0 1 How many page faults does the LRU page replacement algorithm produce?
+a) 10 [45, 46]
+The LRU page replacement algorithm will result in the following page faults: 7, 0, 1, 2, 3, 4, 0, 3, 1, 7. Therefore there are 10 page faults [45, 46].
+Consider the following page reference string. For LRU page replacement algorithm with 4 frames, the number of page faults is?
+a) 10 [45, 46]
+Using LRU, the page faults for the given reference string are: 1, 2, 3, 4, 5, 6, 7, 6, 3, 2. There are 10 page faults [45, 46].
+Consider the following page reference string. For FIFO page replacement algorithms with 4 frames, the number of page faults is?
+a) 16 [45, 46]
+With FIFO, the page faults are 1, 2, 3, 4, 2, 1, 5, 6, 2, 1, 2, 3, 7, 6, 3, 2. So, 16 page faults occur [45, 46].
+Considering SSTF (shortest seek time first) scheduling, the total number of head movements is, if the disk head is initially at 53 is?
+b) 236 [47, 48]
+The SSTF sequence from starting position 53 is 65, 67, 37, 14, 98, 122, 124, 183. The total head movement is 236 cylinders [47-49].
+In the ______ algorithm, the disk arm starts at one end of the disk and moves toward the other end, servicing requests till the other end of the disk. At the other end, the direction is reversed and servicing continues.
+b) SCAN [47, 48]
+The SCAN algorithm moves the disk arm to one end and then reverses direction, servicing requests along the way [47, 48, 50].
+Magnetic tape drives can write data at a speed ________ disk drives.
+a) much lesser than [51, 52]
+Magnetic tape drives write data much slower than disk drives [51, 52].
+Disk requests come to a disk driver for cylinders in the order 10, 22, 20, 2, 40, 6 and 38 at a time when the disk drive is reading from cylinder 20. The seek time is 6 ms/cylinder. The total seek time, if the disk arm scheduling algorithms is first-come-first-served is
+C) 900 [51, 52]
+With FCFS, the sequence is 20, 10, 22, 20, 2, 40, 6, 38. The head movements are 10, 12, 2, 18, 38, 34, and the total is 114 cylinders. 114 cylinders x 6ms/cylinder = 684 ms. The correct answer should be 684 ms not 900 ms.
+For system protection, a process should access _____________
+b) only those resources for which it has authorization [53, 54]
+Processes should only have access to resources for which they have authorization [53, 54].
+The pattern that can be used to identify a virus is known as _____________
+b) virus signature [53, 54]
+A virus signature is a pattern that is used to identify a virus [53, 54].
+What is the need of protection?
+d) All of the mentioned [55, 56]
+Protection mechanisms prevent mischievous violations, both intentional and accidental, and ensure each program component uses only allocated resources [55, 56].
+Network operating system runs on ___________
+a) server [55, 56]
+A network operating system runs on the server [55, 56].
+Internet provides _______ for remote login.
+a) telnet [55, 56]
+Telnet is used for remote login [55, 56].
+In operating system, each process has its own __________
+d) all of the mentioned [57, 58]
+Each process has its own open files, pending alarms, signals, and signal handlers, as well as its own address space and global variables [57, 58].
+Which of the following scheduling algorithms gives priority to the process with the smallest execution time?
+B) Shortest Job Next (SJN) [57, 58]
+Shortest Job Next (SJN) prioritizes the process with the shortest execution time [57, 58].
+What is the purpose of the Process Control Block (PCB)?
+C) To store information about a process. [57, 58]
+A Process Control Block stores information about a process [57, 58].
+What is the primary role of the interrupt vector table?
+A) To store the addresses of interrupt service routines. [59, 60]
+The interrupt vector table stores the addresses of interrupt service routines [59, 60].
+What is the role of the 'fork' system call in Unix-like operating systems?
+A) To create a new process. [59, 60]
+The 'fork' system call creates a new process [59, 60].
+What is the purpose of a semaphore in process synchronization?
+A) To control access to shared resources. [59, 60]
+Semaphores are used to control access to shared resources and ensure proper process synchronization [59, 60].
+The shared variable turn is initialized to zero. Which one of the following is TRUE?
+(C) This solution violates progress requirement. [61, 62]
+This solution violates the progress requirement because the processes can get stuck in a loop if they alternate their execution [61, 62].
+For the program to guarantee mutual exclusion, the predicate P in the while loop should be
+B. flag[j] == true and turn == j [63, 64]
+To guarantee mutual exclusion, the predicate must check if the other process is ready and if it is the other process's turn [63, 64].
+There are 5 threads each invoking incr once, and 3 threads each invoking decr once, on the same shared variable X. The initial value of X is 10. Suppose there are two implementations of the semaphore s, as follows: I-1:s is a binary semaphore initialized to 1. I-2:s is a counting semaphore initialized to 2. Let V1, V2 be the values of X at the end of execution of all the threads with implementations I-1, I-2, respectively. Which one of the following choices corresponds to the minimum possible values of V1, V2, respectively?
+C. 12,7 [65, 66]
+With a binary semaphore (I-1), the operations are serialized. Therefore, a minimum of 2 is added to X because 5 increments and 3 decrements can result in minimum value of 12. The counting semaphore can allow multiple processes at once so the 3 decrements may execute before some of the increments, resulting in the minimum of 7 [65, 66].
+A counting semaphore S is initialized to 10. Then, 6 P operations and 4 V operations are performed on S. What is the final value of S?
+C. 8 [67, 68]
+Each P operation decrements the semaphore value, and each V operation increments the value. 10 - 6 + 4 = 8 [67, 68].
+A shared variable x, initialized to zero, is operated on by four concurrent processes. Semaphore S is initialized to two. What is the maximum possible value of x after all processes complete execution?
+D) 4 [69, 70]
+Since processes W and X increment by 1, and Y and Z decrement by 2, the maximum value of x can be achieved by W and X running before Y and Z, leading to a max value of 2 from W and X running before, before Y and Z decrease X to 0. Then another 2 for a maximum of 4 [69, 70].
+How many times will P0 print ‘0’?
+a) At least twice [71, 72]
+P0 will print 0 at least twice, because it acquires S0, prints 0, and then releases S1 and S2. When P1 and P2 are waiting, they can release S0 to allow P0 to run again [71, 72].
+A counting semaphore S is initialized to 7. Then, 20 P operations and 15 V operations are performed on S. What is the final value of S?
+B. 2 [71, 72]
+The final value will be the initial value - the number of P operations + number of V operations. Thus, 7 - 20 + 15 = 2 [71, 72].
+the average turnaround times (in ms) of SJF and RR (round off to 2 decimal places) is _________.
+(A) 5.0 [73, 74]
+The SJF scheduling sequence would be P4, P1, P3, P2 and average turnaround time (3+9+16+24)/4 = 13. The RR scheduling sequence is P1, P2, P3, P4, P1, P2, P3 and average turnaround time (13+15+17+3)/4 = 12. Therefore, the values provided in the question do not appear to be correct for average turnaround time. Based on the processes provided in the table and using SJF, the process order would be P1, P4, P5, P6 and then average turn around time = (4+2+11+18)/4 = 8.75. If the time quantum was 2, then the average turn around time = (10+13+8+4+18+3)/6 = 9.33.
+If the CPU scheduling policy is Round Robin with time quantum = 2, calculate the average waiting time and average turnaround time.
+D. 10. 34 unit and 8.44 unit [73, 74]
+With a time quantum of 2, the processes would execute in the sequence P1, P2, P3, P4, P5, P6, P1, P2, P5, P6, P5. Average wait time is (10+11+5+0+20+8) / 6 = 9. The average turn around time would be (14+16+7+1+23+11) / 6 = 12. Therefore the values provided in the question do not appear to be correct.
+If the CPU scheduling policy is SRTF, calculate the waiting time of process P2.
+B) 12 unit [75, 76]
+SRTF is a preemptive scheduling algorithm, so it will switch to the next shortest job. The sequence of execution is P1 (15), P2 (15), P3 (10), P4 (15). Then, P2 runs for the remaining 10. Therefore the waiting time for P2 is 1+30-15-25=1. The correct response should be 1, not 12, so the answers provided are incorrect.
+Question 1: File Allocation System - External Fragmentation
+Given Options:
+Contiguous Allocation:
+
+Requires continuous memory blocks.
+Prone to external fragmentation because finding a large contiguous block becomes difficult as memory usage increases.
+Linked Allocation:
+
+Each file is stored as a linked list of disk blocks.
+No external fragmentation since any free block can be used.
+Overhead exists for storing pointers.
+Indexed Allocation:
+
+A separate index block is maintained, which contains pointers to all the disk blocks of the file.
+No external fragmentation as blocks do not need to be contiguous.
+Correct Answer:
+[ \text{d) II and III only.} ]
+
+Question 2: Requires a Device Driver
+Explanation:
+Device drivers are software that allow the operating system to communicate with hardware. For the given options:
+
+Register: Part of the CPU, does not require a driver.
+Cache: Part of the CPU or memory hierarchy, does not require a driver.
+Main Memory: Managed directly by the operating system.
+Disk: Requires a device driver to handle I/O operations and file system management.
+Correct Answer:
+[ \text{d) Disk.} ]
+
+Question 3: Virtual Memory Sharing
+Explanation:
+Virtual memory allows multiple processes to share the same physical memory by abstracting memory addresses. This enables:
+
+Processes to share memory through techniques like shared libraries or inter-process communication.
+Threads and instructions are not directly related to virtual memory sharing.
+
+Correct Answer:
+[ \text{a) processes.} ]
+
+Question 4: Correct Statements
+Statement Analysis:
+Physical separation: Correctly defined as processes using different physical resources (e.g., separate printers).
+Temporal separation: Correctly defined as processes with different security requirements running at different times.
+Incorrect description of physical separation; this describes the illusion of isolation provided by virtual memory.
+Incorrect description of temporal separation; this describes logical separation or confidentiality mechanisms.
+Correct Answer:
+[ \text{b) i and ii.} ] ### Question 1: Total Number of Child Processes Created
+
+Given Code:
+for(i = 0; i < n; i++) {
+    fork();
+}
+Explanation:
+The fork() system call creates a new process each time it is executed.
+Each existing process calls fork() in every iteration of the loop, leading to exponential growth in the number of processes.
+Step-by-Step Analysis:
+Initial process = 1 (parent process).
+Iteration 1: 1 process forks → Total = 2 processes.
+Iteration 2: 2 processes fork → Total = 4 processes.
+Iteration 3: 4 processes fork → Total = 8 processes.
+After (n) iterations, the total number of processes becomes: [ 2^n \text{ (including the parent process)}. ]
+
+Number of child processes created: [ \text{Total Processes} - \text{Parent Process} = 2^n - 1. ]
+
+Correct Answer:
+[ \text{D. } 2^n - 1. ]
+
+Question 2: How Many Times Will P0 Print '0'?
+Given Semaphore Initializations and Processes:
+S0 = 1, S1 = 0, S2 = 0 (binary semaphores).
+Process ( P0 ): Waits on ( S0 ), prints '0', then signals ( S1 ) and ( S2 ).
+Process ( P1 ): Waits on ( S1 ), then signals ( S0 ).
+Process ( P2 ): Waits on ( S2 ), then signals ( S0 ).
+Execution Flow:
+Initially, ( P0 ) starts because ( S0 = 1 ). It:
+
+Waits on ( S0 ) (decrements ( S0 ) to 0).
+Prints '0'.
+Signals ( S1 ) and ( S2 ) (sets ( S1 = 1 ), ( S2 = 1 )).
+Both ( P1 ) and ( P2 ) are now eligible to execute.
+
+( P1 ): Waits on ( S1 ), then signals ( S0 ) (sets ( S0 = 1 )).
+( P2 ): Waits on ( S2 ), then signals ( S0 ) (sets ( S0 = 1 )).
+( P0 ) can now execute again because ( S0 = 1 ), repeating the cycle.
+
+Number of Times '0' is Printed:
+The system forms a cycle where ( P0 ) is guaranteed to execute repeatedly.
+
+There is no termination condition in the code (infinite loop).
+Thus, ( P0 ) will print '0' at least twice.
+Correct Answer:
+[ \text{a) At least twice.} ] ### Answers and Explanations
+
+1. Difference Between Preemptive and Non-Preemptive Scheduling
+Preemptive Scheduling:
+The CPU can be taken away from a running process and allocated to another process. This is often used in time-sharing systems or when a higher-priority process arrives.
+Non-Preemptive Scheduling:
+Once a process is running, it continues until it completes or voluntarily yields the CPU.
+Correct Answer:
+[ \text{b) Preemptive algorithms allow the CPU to be taken away from a process, while non-preemptive algorithms do not.} ]
+
+2. Difference Between Deadlock Prevention and Deadlock Avoidance
+Deadlock Prevention:
+Techniques ensure that at least one of the deadlock conditions (mutual exclusion, hold and wait, no preemption, circular wait) does not occur. For example, resources must be requested in a specific order or preemption is allowed.
+Deadlock Avoidance:
+Uses algorithms like the Banker's Algorithm to ensure that the system always remains in a safe state where deadlock cannot occur.
+Correct Answer:
+[ \text{b) Deadlock prevention techniques require processes to request resources in a specific order, while deadlock avoidance techniques use algorithms to ensure safe resource allocation.} ]
+
+3. Primary Advantage of User-Level Threads Over Kernel-Level Threads
+User-Level Threads:
+Managed entirely by user-space libraries. They are lightweight and have faster context switching since the kernel is not involved.
+Kernel-Level Threads:
+Managed by the operating system, and involve kernel intervention for thread operations.
+Correct Answer:
+[ \text{c) User-level threads have faster context switching.} ]
+
+4. Which One of the Following Is Not True About the Kernel?
+The kernel remains in memory during the entire session. ✅
+The kernel can dynamically load and unload modules in modern systems like Linux. ❌
+The kernel is the first part of the OS to load during booting. ✅
+The kernel constitutes the core of the OS. ✅
+Correct Answer:
+[ \text{b) kernel is made of various modules which cannot be loaded in a running operating system.} ]
+
+5. What is a Long-Term Scheduler?
+Long-Term Scheduler:
+Decides which processes to bring into the ready queue (controls degree of multiprogramming).
+Short-Term Scheduler:
+Selects processes from the ready queue to execute on the CPU.
+Medium-Term Scheduler:
+Handles swapping of processes (e.g., moving them to/from memory and disk).
+Correct Answer:
+[ \text{a) It selects processes which have to be brought into the ready queue.} ]
+
+6. Process State Transitions in Preemptive Scheduling
+Running → Ready: Happens during preemption. ✅
+Ready → Ready: Not valid; the ready process does not change states unless scheduled. ❌
+Blocked → Running: Cannot happen directly; a process must move to ready first. ❌
+Blocked → Ready: Happens when the event the process was waiting for occurs. ✅
+Correct Answer:
+[ \text{c) I, II and IV only.} ]
+
+7. Context Switch Scenarios
+Blocking System Call: Causes a process to enter a blocked state. ✅
+Page Fault: Requires the process to wait while the page is loaded from disk. ✅
+Interrupt by Disk (Other Process): Does not affect the current process. ❌
+Timer Interrupt: Preempts the current process, switching it to ready state. ✅
+Correct Answer:
+[ \text{c) I, II, and IV only.} ]
+
+8. Two-Process Synchronization Solution
+This solution uses a shared variable turn to ensure mutual exclusion.
+Mutual Exclusion: Satisfied as only one process enters the critical section based on the turn value.
+Progress: Violated as one process might indefinitely loop in the entry section if the other process does not release the turn.
+Correct Answer:
+[ \text{c) This solution violates the progress requirement.} ]
+
+9. Peterson's Algorithm Predicate for Mutual Exclusion
+Peterson's Algorithm: Ensures mutual exclusion using two variables:
+flag[i] to indicate process i's interest in the critical section.
+turn to decide which process enters if both are interested.
+For mutual exclusion, the condition is:
+[ \text{flag[j] == true and turn == i.} ]
+
+Correct Answer:
+[ \text{b) flag[j] == true and turn == j.} ]
+
+*References
